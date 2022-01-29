@@ -3,6 +3,14 @@
 ## Mutable variables
 Mutable variables should be declared using the `mut` keyword, like so: `let mut foo = 3`.
 
+## Constant variables
+
+Constants must be explicitly typed and should be written in upper-snake-case.
+
+```rust
+const MAX_ATTEMPTS: u32 = 10;
+```
+
 ## Type inference
 The `.parse()` method of the `String` type infers the assignment type and attempts to parse the string value according to such type. In this example this is used to parse the user input to a unsigned 32 bits number, like so:
 
@@ -45,6 +53,12 @@ match guess.cmp(&secret_number) {
     }
 }
 ```
+
+## Loops
+
+`loop { ... }` is used to indicate infinite loops.
+
+`while <condition> { ... }` is a regular while loop that breaks on a condition.
 
 ## Docs
 

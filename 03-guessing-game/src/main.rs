@@ -9,9 +9,10 @@ fn main() {
   println!("Secret number {}", secret_number);
   println!("Guess the number!");
 
+  const MAX_ATTEMPTS: u32 = 10;
   let mut attempts: u32 = 0;
 
-  loop {
+  while attempts < MAX_ATTEMPTS {
     println!("Please input your guess.");
 
     let mut guess = String::new();
