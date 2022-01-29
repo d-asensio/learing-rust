@@ -7,8 +7,9 @@ fn main() {
       .gen_range(1..101);
 
   println!("Secret number {}", secret_number);
-
   println!("Guess the number!");
+
+  let mut attempts: u32 = 0;
 
   loop {
     println!("Please input your guess.");
@@ -20,7 +21,10 @@ fn main() {
       .expect("failed to read the line");
 
     let guess: u32 = match guess.trim().parse() {
-      Ok(number) => number,
+      Ok(number) => {
+        attempts += 1;
+        number
+      },
       Err(_) => {
         println!("Wrong input! Please, input only positive numbers");
         continue;
@@ -33,7 +37,7 @@ fn main() {
       Ordering::Less => println!("Too small"),
       Ordering::Greater => println!("Too big"),
       Ordering::Equal => {
-        println!("You win!");
+        println!("You win! The secret number was {} and you guessed it in {} attempts", secret_number, attempts);
         break;
       }
     }
