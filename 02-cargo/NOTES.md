@@ -1,6 +1,6 @@
 # Cargo
 
-Cargo is the official Rust dependency manager, it also helps you build and run your rust app, some usefull commands are:
+Cargo is the official Rust dependency manager, it also helps you build and run your rust app, some useful commands are:
 
 - `cargo build` Builds the app and puts the resulting binary into `target/debug`. Take into account that this will build an unoptimized version of the program.
 - `cargo run` Builds and runs the app (also unoptimized version).
