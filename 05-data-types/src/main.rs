@@ -34,7 +34,7 @@ fn scalar_types_integer () {
     const UNSIGNED_128_BITS_INTEGER: u128 = 340_282_366_920_938_463_463_374_607_431_768_211_455;
     println!("Signed 128bit integer (0...340282366920938463463374607431768211455): {}", UNSIGNED_128_BITS_INTEGER);
 
-    println!("architecture (64bits in my case):");
+    println!("Architecture (64bits in my case):");
     const SIGNED_ARCHITECTURE_INTEGER: isize = 9_223_372_036_854_775_807;
     println!("Unsigned architecture: {}", SIGNED_ARCHITECTURE_INTEGER);
 
@@ -42,8 +42,18 @@ fn scalar_types_integer () {
     println!("Signed architecture: {}", UNSIGNED_ARCHITECTURE_INTEGER);
 }
 
+fn floating_point () {
+    const FLOATING_64: f64 = 2.1;
+    const FLOATING_32: f32 = 3.2;
+
+    println!("Floating point number 64 bits: {}", FLOATING_64);
+    println!("Floating point number 32 bits: {}", FLOATING_32);
+}
+
 fn main() {
     println!("-- Scalar types --");
     println!("-- integer");
     scalar_types_integer();
+    println!("-- floating point");
+    floating_point();
 }

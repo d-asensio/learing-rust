@@ -7,3 +7,8 @@ Since rust is a *statically typed* language, it must know variable types at comp
 In debug mode rust checks for overflows and makes the program panic if such situation occurs. However, in release mode rust will perform two’s complement wrapping over the overflowed value without panicking and this is considered an error.
 
 To avoid/check for overflows or explicitly wrap a value when an operation overflows, rust's standard library provides a set of functions preceded by `wrapping_`, `cehcked_`, `overflowing_` and `saturating_`.
+
+
+## Floating-Point
+
+Not much to say here, in rust floating-point numbers are represented according to the IEEE-754 standard. The f32 type is a single-precision float, and f64 has double precision.
