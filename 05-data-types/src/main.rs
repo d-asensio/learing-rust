@@ -50,10 +50,36 @@ fn floating_point () {
     println!("Floating point number 32 bits: {}", FLOATING_32);
 }
 
+fn characters () {
+    const EMOJI: char = '😀';
+    println!("Displaying an emoji {}", EMOJI)
+}
+
+fn tuples () {
+    const TUPLE: (i8, char) = (8, 'A');
+    let (number, character) = TUPLE;
+
+    println!("A tuple looks like this: ({}, {})", number, character);
+}
+
+fn arrays () {
+    const ARRAY: [char; 2] = ['A', 'B'];
+    let [first, second] = ARRAY;
+    println!("An array looks like this: [{}, {}]", first, second);
+}
+
+
 fn main() {
     println!("-- Scalar types --");
     println!("-- integer");
     scalar_types_integer();
     println!("-- floating point");
     floating_point();
+    println!("-- characters");
+    characters();
+    println!("-- Compound types --");
+    println!("-- tuples");
+    tuples();
+    println!("-- arrays");
+    arrays();
 }
